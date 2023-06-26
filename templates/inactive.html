@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+.text-center {
+  text-align: center;
+  margin-top: 20px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ /* Motion Background */
+ @keyframes motionBackground {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        body {
+            animation: motionBackground 20s infinite;
+            background-image: linear-gradient(45deg, #564a50, #292e2e, #e9f4f4, #986148);
+            background-size: 300% 300%;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-center">
+        <h1>Welcome!</h1>
+        <br/>
+        <p>
+          You have not confirmed your account. Please check your inbox
+          you should have received an email with a confirmation link.
+        </p>
+        <p>
+          Didn't get the email?
+          <a href="{{url_for('resend')}}">Resend</a>
+          <a href="{{url_for('logout')}}">logout</a>
+        </p>
+      </div> 
+</body>
+</html>
+  
